@@ -1,0 +1,7 @@
+unsplash.com for animals' images
+
+continue-> adding animals in intro page. 
+edit index.html
+write about us page
+make cats.html and dogs.html
+contact form and email receiving form linking to database

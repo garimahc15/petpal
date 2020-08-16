@@ -35,6 +35,7 @@ TO THIS-> href="{% static 'styles/bootstrap4/bootstrap.min.css' %}"-->
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
 									<li class="active"><a href="index.html">Home</a></li>
+									<li><a href="about.html">Contact</a></li>
 									<li><a href="contact.html">Contact</a></li>
 
 									{% if user.is_authenticated %}
@@ -61,12 +62,11 @@ TO THIS-> href="{% static 'styles/bootstrap4/bootstrap.min.css' %}"-->
 		</div>
 		<div class="header_social d-flex flex-row align-items-center justify-content-start">
 			<ul class="d-flex flex-row align-items-start justify-content-start">
-				<li><a href="{% static '#' %}"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
 				<li><a href="{% static '#' %}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 				<li><a href="{% static '#' %}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 				<li><a href="{% static '#' %}"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
 				<li><a href="{% static '#' %}"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-				<li><a href="{% static '#' %}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				<li><a href="www.linkedin.com/in/garimachahar"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 			</ul>
 		</div>
 	</header>
@@ -80,11 +80,9 @@ TO THIS-> href="{% static 'styles/bootstrap4/bootstrap.min.css' %}"-->
 		</div>
 		<div class="menu_content">
 			<ul>
-				<li><a href="{% static 'inex.html' %}">Home</a></li>
-				<li><a href="{% static 'about.html' %}">About us</a></li>
-				<li><a href="{% static '#' %}">Services</a></li>
-				<li><a href="{% static 'news.html' %}">News</a></li>
-				<li><a href="{% static 'contact.html' %}">Contact</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="contact.html">Contact</a></li>
 			</ul>
 		</div>
 		<div class="menu_social">
@@ -243,7 +241,7 @@ TO THIS-> href="{% static 'styles/bootstrap4/bootstrap.min.css' %}"-->
 		</div>
 	</div>
 
-	<!-- Destinations -->
+	<!-- Index Page intro to types of animals we have -->
 
 	<div class="destinations" id="destinations">
 		<div class="container">
@@ -257,22 +255,18 @@ TO THIS-> href="{% static 'styles/bootstrap4/bootstrap.min.css' %}"-->
 				<div class="col">
 					<div class="destinations_container item_grid">
 
-						{% for dest in dests %}
+						{% for  catdog in catdogs %}
 						<!-- Destination -->
 						<div class="destination item">
 							<div class="destination_image">
 								<!-- <img src="{{baseUrl}}/{{dest.img}}" alt=""> -->
 								
-								<img src="{{dest.img.url}}" alt="">  <!--now using sql database to fetch imgs so its not in baseUrl anymore-->
-								{% if dest.offer %}
-								<div class="spec_offer text-center"><a href="{% static '#' %}">Special Offer</a></div>
-								{% endif %}
+								<img src="{{catdog.img.url}}" alt="">  <!--now using sql database to fetch imgs so its not in baseUrl anymore-->
 
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="{% static 'destinations.html' %}">{{dest.name}}</a></div>
-								<div class="destination_subtitle"><p>{{dest.desc}}</p></div>
-								<div class="destination_price">From ${{dest.price}}</div>
+								<div class="destination_title">{{catdog.name}}</div>
+								<div class="destination_subtitle"><p>{{catdog.desc}}</p></div>
 							</div>
 						</div>
 						{% endfor %}
