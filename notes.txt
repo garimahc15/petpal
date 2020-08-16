@@ -1,7 +1,7 @@
 unsplash.com for animals' images
-
-continue-> adding animals in intro page. 
-edit index.html
+ 
+edit testimonials on index.html
+re-add descriptions of index page images using admin panel
 write about us page
-make cats.html and dogs.html
+edit contact.html page... {%static %}
 contact form and email receiving form linking to database
