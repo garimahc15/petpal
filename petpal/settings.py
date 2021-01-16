@@ -21,10 +21,10 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'cj&#@)hbp&pa^1*h3=wtb^m_dley72@y@0n74ughk@dfbem*ox'
+SECRET_KEY = 'XXXXXXXXXXXXXXXXXXXXX'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -79,8 +79,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'petpal',
-        'USER' : 'postgres',
-        'PASSWORD': 'faith',
+        'USER' : 'XXXXXX',
+        'PASSWORD': 'XXXXXX',
         'HOST': 'localhost'
     }
 }
